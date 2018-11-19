@@ -1,0 +1,290 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  // overflow-x: hidden;
+  margin: 0 auto;
+  font-size: 16px;
+  &.newBodyLayout {
+    position: relative;
+    z-index: 1;
+  }
+  &.newBodyAside {
+    position: relative;
+    z-index: 1;
+    min-width: 1250px;
+    .el-main {
+      // overflow: visible !important;
+      overflow: inherit;
+      .el-col-20 {
+        width: 100% !important;
+      }
+      el-form {
+        width: 556px;
+        overflow: visible;
+      }
+      .el-table__body {
+        // width: 0 !important;
+      }
+      .el-table--scrollable-x .el-table__body-wrapper {
+        overflow: visible;
+      }
+    }
+    .pl-footer {
+      z-index: 2001;
+    }
+  }
+  &.newBody {
+    max-height: 100%;
+    overflow: hidden !important;
+    .pl-main-2 {
+      // max-height: 79%;
+      max-height: 87%;
+      overflow: hidden;
+      @media screen and(-ms-high-contrast:active),(-ms-high-contrast:none){
+        /*兼容IE11*/
+        overflow:auto; /* all ie */        
+      }
+      .el-main {
+        max-height: 100%;
+        overflow: auto;
+      }
+    }
+  }
+}
+
+body {
+  // min-width: 960px !important;
+  margin: 0 auto; // font-family: 'Segoe UI', SegoeUI, 'Segoe WP', Tahoma, Arial, sans-serif, 'Microsoft YaHei'; // font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-family: Segoe UI, Helvetica, HelveticaNeue, Arial, Microsoft Yahei,
+    Hiragino Sans GB, Heiti SC, Sans Serif !important;
+  font-size: 16px !important;
+  color: #222222;
+  line-height: 21px;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+.pl-container {
+  height: 100%;
+}
+
+.pl-header {
+  min-width: 320px !important;
+  background: #1369bf;
+  width: 100%;
+  position: fixed;
+  height: 61px;
+  left: 0;
+  z-index: 1000; // border-bottom: 1px solid #b6b6b8;
+  // box-shadow: 0px 0px 10px #b6b6b8;
+}
+
+.pl-nav {
+  // display: inline;
+
+  margin-left: 30px;
+  img {
+    height: 35px;
+    margin: 12px 0;
+    float: left;
+  }
+  a {
+    line-height: 61px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Segoe UI';
+    color: #ffffff;
+  }
+}
+
+.pl-main {
+  min-height: 100%;
+  margin: 0 auto;
+  margin-top: 61px;
+}
+
+.pl-main-2 {
+  // min-height: 100%;
+  width: 100%;
+  margin: 70px auto;
+  // max-height: 79%;
+  overflow: hidden;
+}
+
+.toolbar {
+  width: 100%;
+  padding: 20px 50px;
+}
+
+.pl-footer {
+  height: 60px;
+  background: #f4f4f4;
+  color: #4d5766;
+  font-size: 14px;
+  text-align: center;
+  img {
+    height: 35px;
+    position: relative;
+    top: 10px;
+  }
+  a {
+    color: #4d5766;
+  }
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+h1 {
+  display: block;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  color: #000;
+}
+
+h2 {
+  display: block;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  margin: 10px 0;
+  color: #000;
+}
+
+h3 {
+  display: block;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #000;
+}
+
+h4 {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+  text-decoration: none;
+}
+
+.el-card__header {
+  padding: 10px 5px 10px 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.el-card__body {
+  padding: 10px 5px 10px 20px;
+}
+
+// .el-message-box
+// .el-input__inner,
+// .el-checkbox__inner,
+// .el-textarea__inner,
+// .el-button,
+// .el-radio-button__inner,
+// .el-radio-button,
+// .el-radio-button--medium,
+// .el-radio-group,
+// .el-button-group .el-button:first-child:last-child,
+// .el-radio-button:first-child .el-radio-button__inner,
+// .el-radio-button:last-child .el-radio-button__inner {
+//   border-radius: 0;
+// }
+.el-* {
+  border-radius: 0;
+}
+
+.el-form-item__label {
+  color: #000;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #dddfe7;
+}
+.el-message{
+  position: fixed;
+  // z-index: 2011 ;
+}
+.el-message.el-message--error{
+  z-index: 4000!important;
+}
+.el-menu::after,
+.el-menu::before {
+  display: none;
+}
+
+.el-menu--horizontal {
+  border-right: none;
+  border-bottom: none;
+}
+
+.el-popover,
+.el-radio-button .el-radio-button__inner {
+  border-radius: 0;
+}
+
+.el-aside {
+  border-right: solid 1px #e6e6e6;
+}
+
+.el-input.is-disabled .el-input__inner {
+  background-color: #f6f8f6;
+  border-color: #e4e7ed;
+  color: #222222;
+  cursor: default;
+}
+
+.el-checkbox__input.is-disabled .el-checkbox__inner {
+  background-color: #e4e7ed;
+  border-color: #e4e7ed;
+  color: #222222;
+  cursor: default;
+}
+
+.el-checkbox__input.is-disabled.is-checked + span.el-checkbox__label {
+  cursor: default;
+  color: #222222;
+}
+
+.el-table__body tr.current-row > td:first-child {
+  border-left: 5px solid #409eff;
+}
+
+.el-menu-item,
+.el-submenu__title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.el-checkbox__label {
+  white-space: normal;
+}
+@media screen and (max-width: 320px) {
+  .newBodyAside {
+    min-width: 700px;
+    overflow: auto;
+  }
+}

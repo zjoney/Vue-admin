@@ -1,0 +1,9 @@
+{
+  "presets": [
+    ["env", {
+      "exclude": ["transform-es2015-classes"]
+    }],
+    "stage-2"
+  ],
+  "plugins": ["transform-vue-jsx", "transform-runtime", "transform-remove-strict-mode"]
+}
